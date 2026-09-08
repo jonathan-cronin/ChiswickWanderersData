@@ -1,0 +1,25 @@
+# Normalise line endings: LF in the repository, native in the working copy.
+# Without this, a clone on macOS or Linux shows every file as fully rewritten.
+* text=auto eol=lf
+
+# Data files -- keep LF explicitly.
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+
+# Media is binary. These are git-ignored, but be explicit in case one is ever
+# force-added: never line-ending-convert or attempt to diff them.
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.mkv binary
+*.m4v binary
+*.mts binary
+*.m2ts binary
+*.insv binary
+*.wav binary
+*.mp3 binary
+*.png binary
+*.jpg binary
+*.jpeg binary

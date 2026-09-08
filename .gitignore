@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# Match footage and large media
+#
+# Footage is stored LOCALLY, outside version control -- GitHub's per-file and
+# repo size limits make committing raw match video impractical, and a clip that
+# lands in history is painful to purge. See docs/capture.md.
+# ---------------------------------------------------------------------------
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+*.mts
+*.m2ts
+*.insv
+*.wav
+*.mp3
+
+# Raw capture drop -- contents are never tracked.
+data/raw/*
+!data/raw/README.md
+
+# Derived media: clips, stills, renders.
+data/interim/
+data/processed/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# IDE / editor
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------------------
+# OS cruft
+# ---------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Local config / secrets
+# ---------------------------------------------------------------------------
+.env
+config.local.*
